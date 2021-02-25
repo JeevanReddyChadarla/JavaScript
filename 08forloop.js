@@ -25,20 +25,49 @@ var i;
 
 //** Objects for loop
 
-var newobj = {"name":"Jeevan", "place":"Tirupati", "age": 23};
-console.log(newobj);
+// var newobj = {"name":"Jeevan", "place":"Tirupati", "age": 23};
+// console.log(newobj);
 
 //there is no property length in objects
 
-let j;
-for(j in newobj){
-    console.log(j);
-    console.log(newobj[j]);
-}
+// let j;
+// for(j in newobj){
+//     console.log(j);
+//     console.log(newobj[j]);
+// }
 
-var newarrobj = ['maths','english',{"science":'physics','nature':'biology',"social":"history"}];
-let k;
-for(k in newarrobj){
-    console.log(k);
-    console.log(newarrobj[k]);
+var newarrobj = [{"science":'physics','nature':'biology',"social":"history","fiction":{"culture":"psychology"}}];
+
+
+const data= [
+    {
+      "component": "button",
+      "block": false,
+      "danger": false,
+      "disabled": false,
+      "ghost": false,
+    },
+    {
+      "component": "dropdown",
+      "arrow": false,
+      "disabled": false,
+      "children":{
+        "block": false,
+        "danger": false,
+        "disabled": false
+      },
+    }
+ 
+  ]
+
+function isObj(obj){
+    let k;
+    for(k in obj){
+        // console.log(k);
+        console.log(k+" : "+obj[k]);
+        if(obj[k] instanceof Object){
+           console.log(obj[k]);
+        }
+    }
 }
+isObj(data);
